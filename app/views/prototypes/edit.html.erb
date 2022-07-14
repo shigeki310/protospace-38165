@@ -1,9 +1,10 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
+      <% if user_signed_in? %>
       <h2 class="page-heading">プロトタイプ編集</h2>
-      <%# 部分テンプレートでフォームを表示する %>
-      <%= render partial: "form", locals: { prototype: @prototype}  %>
+        <%= render partial: "form", locals: { prototype: @prototype}  %>
+      <% end %>
     </div>
   </div>
 </div>
